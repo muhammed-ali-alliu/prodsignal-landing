@@ -344,7 +344,7 @@ ${parsedResults?.features.map((f, i) => `### ${i + 1}. ${f.feature}
 
   const submitEmail = () => {
     if (email.trim()) {
-      alert(`Thanks! We'll notify ${email} when we launch.`);
+      alert(`Welcome to the waitlist! We'll notify ${email} when we launch with your 50% founding customer discount.`);
       setEmail('');
     }
   };
@@ -401,15 +401,18 @@ ${parsedResults?.features.map((f, i) => `### ${i + 1}. ${f.feature}
                     <span className="text-sm text-white/70">AI-Powered Product Discovery</span>
                   </div>
 
-                  <h1 className="text-5xl md:text-7xl font-bold leading-[0.95] tracking-tight mb-8" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
-                    Find Signal in<br />
+                  <h1 className="text-5xl md:text-6xl font-bold leading-[0.95] tracking-tight mb-4" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
+                    From Customer Calls to<br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-emerald-400">
-                      Customer Noise
+                      Prioritized Specs
                     </span>
                   </h1>
+                  <p className="text-2xl md:text-3xl font-bold text-white/80 mb-8" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
+                    In hours, not weeks
+                  </p>
 
                   <p className="text-xl text-white/60 leading-relaxed mb-10 max-w-lg" style={{ fontFamily: '"Instrument Sans", sans-serif' }}>
-                    Upload customer interviews. Get AI-powered feature recommendations backed by evidence. No more gut decisions.
+                    Upload customer interviews. Get AI-powered PRDs with full traceability from quotes to features.
                   </p>
 
                   <button
@@ -467,6 +470,89 @@ ${parsedResults?.features.map((f, i) => `### ${i + 1}. ${f.feature}
             </div>
           </section>
 
+          {/* Research/Problem Section */}
+          <section className="py-20 border-t border-white/5">
+            <div className="max-w-6xl mx-auto px-6">
+              <div className="grid md:grid-cols-2 gap-12">
+                <div>
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-red-500/10 text-red-400 rounded-full text-sm font-medium mb-6">
+                    <span>The Problem</span>
+                  </div>
+                  <h2 className="text-3xl font-bold mb-8" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
+                    PMs spend DAYS on synthesis
+                  </h2>
+                  <div className="space-y-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-8 h-8 rounded-lg bg-red-500/20 text-red-400 flex items-center justify-center flex-shrink-0 mt-1">
+                        <span className="text-sm font-bold">£</span>
+                      </div>
+                      <div>
+                        <p className="font-semibold mb-1" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>Average PM stack: £400-2,000/month</p>
+                        <p className="text-sm text-white/50" style={{ fontFamily: '"Instrument Sans", sans-serif' }}>Multiple tools that don't talk to each other</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <div className="w-8 h-8 rounded-lg bg-red-500/20 text-red-400 flex items-center justify-center flex-shrink-0 mt-1">
+                        <span className="text-sm">⏱</span>
+                      </div>
+                      <div>
+                        <p className="font-semibold mb-1" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>Hours spent manually tagging interviews</p>
+                        <p className="text-sm text-white/50" style={{ fontFamily: '"Instrument Sans", sans-serif' }}>Spreadsheets, sticky notes, endless docs</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <div className="w-8 h-8 rounded-lg bg-red-500/20 text-red-400 flex items-center justify-center flex-shrink-0 mt-1">
+                        <span className="text-sm">?</span>
+                      </div>
+                      <div>
+                        <p className="font-semibold mb-1" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>No connection between discovery → decisions</p>
+                        <p className="text-sm text-white/50" style={{ fontFamily: '"Instrument Sans", sans-serif' }}>Feature requests lost in translation</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-500/10 text-emerald-400 rounded-full text-sm font-medium mb-6">
+                    <span>The Solution</span>
+                  </div>
+                  <h2 className="text-3xl font-bold mb-8" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
+                    ProdSignal automates the synthesis
+                  </h2>
+                  <div className="space-y-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 mt-1">
+                        <span className="text-sm font-bold">10</span>
+                      </div>
+                      <div>
+                        <p className="font-semibold mb-1" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>10 calls → Prioritized PRD in one day</p>
+                        <p className="text-sm text-white/50" style={{ fontFamily: '"Instrument Sans", sans-serif' }}>AI extracts problems, features, and evidence automatically</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <div className="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 mt-1">
+                        <span className="text-sm">🔗</span>
+                      </div>
+                      <div>
+                        <p className="font-semibold mb-1" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>Full traceability</p>
+                        <p className="text-sm text-white/50" style={{ fontFamily: '"Instrument Sans", sans-serif' }}>Every requirement links to customer quotes</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <div className="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 mt-1">
+                        <span className="text-sm">⚡</span>
+                      </div>
+                      <div>
+                        <p className="font-semibold mb-1" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>Replace hours of manual work</p>
+                        <p className="text-sm text-white/50" style={{ fontFamily: '"Instrument Sans", sans-serif' }}>Focus on decisions, not data entry</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* How it works */}
           <section className="py-32 border-t border-white/5">
             <div className="max-w-7xl mx-auto px-6">
@@ -484,6 +570,179 @@ ${parsedResults?.features.map((f, i) => `### ${i + 1}. ${f.feature}
                     <p className="text-white/50" style={{ fontFamily: '"Instrument Sans", sans-serif' }}>{step.desc}</p>
                   </div>
                 ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Platform Vision */}
+          <section className="py-32 border-t border-white/5">
+            <div className="max-w-5xl mx-auto px-6">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
+                  Complete Product Discovery Platform
+                </h2>
+                <p className="text-xl text-white/60 max-w-2xl mx-auto" style={{ fontFamily: '"Instrument Sans", sans-serif' }}>
+                  ProdSignal isn't just transcript analysis. It's a complete platform that automates your entire product discovery process.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-8 mb-16">
+                {/* Available Today */}
+                <div className="bg-emerald-500/5 border border-emerald-500/20 rounded-3xl p-8">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center">
+                      <span className="text-black font-bold text-sm">✓</span>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-emerald-400" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
+                        Available Today
+                      </h3>
+                    </div>
+                  </div>
+                  <h4 className="text-2xl font-bold mb-3" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
+                    Interview Analysis
+                  </h4>
+                  <p className="text-white/60 mb-4" style={{ fontFamily: '"Instrument Sans", sans-serif' }}>
+                    Upload transcripts, get prioritized features with evidence
+                  </p>
+                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 text-emerald-400 rounded-full text-sm font-medium">
+                    <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
+                    Try demo above
+                  </div>
+                </div>
+
+                {/* Coming Soon */}
+                <div className="bg-white/5 border border-white/10 rounded-3xl p-8">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-10 h-10 rounded-full bg-amber-500/20 flex items-center justify-center">
+                      <span className="text-amber-400 font-bold text-sm">→</span>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-amber-400" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
+                        Coming in Q1 2026
+                      </h3>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    {[
+                      { title: 'Usage Data Integration', desc: 'Connect Mixpanel/Amplitude. Combine behavioral data with customer interviews' },
+                      { title: 'Decision Engine', desc: 'Ask what should we build next. Get AI recommendations ranked by impact' },
+                      { title: 'Spec Generator', desc: 'Turn feature ideas into complete PRDs. Output ready for Cursor/engineers' },
+                      { title: 'Continuous Monitoring', desc: 'Auto-analyze support tickets, NPS, reviews. Never miss important signals' },
+                    ].map((feature, i) => (
+                      <div key={i} className="border-l-2 border-amber-500/30 pl-4">
+                        <h4 className="font-semibold mb-1" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>{feature.title}</h4>
+                        <p className="text-sm text-white/50" style={{ fontFamily: '"Instrument Sans", sans-serif' }}>{feature.desc}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Pricing */}
+              <div>
+                <div className="text-center mb-12">
+                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/10 text-amber-400 rounded-full text-sm font-medium mb-6">
+                    <span>Early Access</span>
+                  </div>
+                  <h2 className="text-3xl font-bold mb-4" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
+                    Pricing
+                  </h2>
+                  <p className="text-white/50" style={{ fontFamily: '"Instrument Sans", sans-serif' }}>
+                    Join waitlist for 50% founding customer discount
+                  </p>
+                </div>
+
+                <div className="grid md:grid-cols-3 gap-6">
+                  {/* Starter */}
+                  <div className="bg-white/5 border border-white/10 rounded-3xl p-8 hover:border-white/20 transition-colors">
+                    <h3 className="text-xl font-bold mb-2" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>Starter</h3>
+                    <div className="text-4xl font-bold mb-4" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>£39<span className="text-lg text-white/50">/mo</span></div>
+                    <ul className="space-y-3 mb-8">
+                      <li className="flex items-center gap-2 text-sm text-white/70">
+                        <div className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs">✓</div>
+                        1 PM
+                      </li>
+                      <li className="flex items-center gap-2 text-sm text-white/70">
+                        <div className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs">✓</div>
+                        Unlimited interview analysis
+                      </li>
+                      <li className="flex items-center gap-2 text-sm text-white/70">
+                        <div className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs">✓</div>
+                        PRD generation
+                      </li>
+                      <li className="text-sm text-white/40">Perfect for solo PMs</li>
+                    </ul>
+                    <button
+                      onClick={scrollToDemo}
+                      className="w-full py-3 bg-white/10 hover:bg-white/20 rounded-full font-semibold transition-colors"
+                      style={{ fontFamily: '"Space Grotesk", sans-serif' }}
+                    >
+                      Get Started
+                    </button>
+                  </div>
+
+                  {/* Team - Featured */}
+                  <div className="bg-gradient-to-br from-amber-400/10 to-emerald-400/10 border border-amber-400/30 rounded-3xl p-8 relative">
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-amber-400 to-emerald-400 text-black text-xs font-bold rounded-full">
+                      POPULAR
+                    </div>
+                    <h3 className="text-xl font-bold mb-2" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>Team</h3>
+                    <div className="text-4xl font-bold mb-4" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>£199<span className="text-lg text-white/50">/mo</span></div>
+                    <ul className="space-y-3 mb-8">
+                      <li className="flex items-center gap-2 text-sm text-white/70">
+                        <div className="w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center text-xs">✓</div>
+                        Up to 5 PMs
+                      </li>
+                      <li className="flex items-center gap-2 text-sm text-white/70">
+                        <div className="w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center text-xs">✓</div>
+                        All features
+                      </li>
+                      <li className="flex items-center gap-2 text-sm text-white/70">
+                        <div className="w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center text-xs">✓</div>
+                        Integrations
+                      </li>
+                      <li className="flex items-center gap-2 text-sm text-white/70">
+                        <div className="w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center text-xs">✓</div>
+                        Team collaboration
+                      </li>
+                    </ul>
+                    <button
+                      onClick={scrollToDemo}
+                      className="w-full py-3 bg-gradient-to-r from-amber-400 to-emerald-400 text-black rounded-full font-bold hover:shadow-lg hover:shadow-amber-400/25 transition-all"
+                      style={{ fontFamily: '"Space Grotesk", sans-serif' }}
+                    >
+                      Get Started
+                    </button>
+                  </div>
+
+                  {/* Enterprise */}
+                  <div className="bg-white/5 border border-white/10 rounded-3xl p-8 hover:border-white/20 transition-colors">
+                    <h3 className="text-xl font-bold mb-2" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>Enterprise</h3>
+                    <div className="text-4xl font-bold mb-4" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>Custom</div>
+                    <ul className="space-y-3 mb-8">
+                      <li className="flex items-center gap-2 text-sm text-white/70">
+                        <div className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs">✓</div>
+                        Unlimited PMs
+                      </li>
+                      <li className="flex items-center gap-2 text-sm text-white/70">
+                        <div className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs">✓</div>
+                        SSO & security
+                      </li>
+                      <li className="flex items-center gap-2 text-sm text-white/70">
+                        <div className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs">✓</div>
+                        Dedicated support
+                      </li>
+                    </ul>
+                    <button
+                      onClick={scrollToDemo}
+                      className="w-full py-3 bg-white/10 hover:bg-white/20 rounded-full font-semibold transition-colors"
+                      style={{ fontFamily: '"Space Grotesk", sans-serif' }}
+                    >
+                      Contact Sales
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -635,10 +894,10 @@ ${parsedResults?.features.map((f, i) => `### ${i + 1}. ${f.feature}
                 <Mail className="w-8 h-8 text-black" />
               </div>
               <h2 className="text-3xl font-bold mb-4" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
-                Get notified
+                Get 50% off launch pricing
               </h2>
               <p className="text-white/50 mb-8" style={{ fontFamily: '"Instrument Sans", sans-serif' }}>
-                We're building ProdSignal. Leave your email and we'll let you know when we launch.
+                Join the waitlist for founding customer discount. Limited spots available.
               </p>
               <div className="flex gap-3">
                 <input
@@ -654,7 +913,7 @@ ${parsedResults?.features.map((f, i) => `### ${i + 1}. ${f.feature}
                   className="px-8 py-4 bg-white text-black rounded-full font-bold hover:bg-amber-400 transition-colors"
                   style={{ fontFamily: '"Space Grotesk", sans-serif' }}
                 >
-                  Notify
+                  Join
                 </button>
               </div>
             </div>
@@ -828,10 +1087,10 @@ ${parsedResults?.features.map((f, i) => `### ${i + 1}. ${f.feature}
           {/* Feedback */}
           <section className="bg-white/5 border border-white/10 rounded-3xl p-8 text-center">
             <h3 className="text-2xl font-bold mb-2" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
-              Want to see ProdSignal launch?
+              Get 50% off as a founding customer
             </h3>
             <p className="text-white/50 mb-6" style={{ fontFamily: '"Instrument Sans", sans-serif' }}>
-              Leave your email and we'll notify you when we're ready.
+              Join the waitlist for early access and launch discount.
             </p>
             <div className="flex gap-3 max-w-md mx-auto">
               <input
