@@ -899,22 +899,16 @@ ${parsedResults?.features.map((f, i) => `### ${i + 1}. ${f.feature}
               <p className="text-white/50 mb-8" style={{ fontFamily: '"Instrument Sans", sans-serif' }}>
                 Join the waitlist for founding customer discount. Limited spots available.
               </p>
-              <div className="flex gap-3">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="your@email.com"
-                  className="flex-1 px-5 py-4 bg-white/5 border border-white/10 rounded-full focus:outline-none focus:border-amber-400 transition-colors"
-                  style={{ fontFamily: '"Instrument Sans", sans-serif' }}
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-4">
+                <iframe
+                  data-tally-src="https://tally.so/r/XxDedj"
+                  width="100%"
+                  height="400"
+                  frameBorder="0"
+                  marginHeight={0}
+                  marginWidth={0}
+                  title="ProdSignal Waitlist"
                 />
-                <button
-                  onClick={submitEmail}
-                  className="px-8 py-4 bg-white text-black rounded-full font-bold hover:bg-amber-400 transition-colors"
-                  style={{ fontFamily: '"Space Grotesk", sans-serif' }}
-                >
-                  Join
-                </button>
               </div>
             </div>
           </section>
@@ -1092,22 +1086,16 @@ ${parsedResults?.features.map((f, i) => `### ${i + 1}. ${f.feature}
             <p className="text-white/50 mb-6" style={{ fontFamily: '"Instrument Sans", sans-serif' }}>
               Join the waitlist for early access and launch discount.
             </p>
-            <div className="flex gap-3 max-w-md mx-auto">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="your@email.com"
-                className="flex-1 px-5 py-4 bg-white/5 border border-white/10 rounded-full focus:outline-none focus:border-amber-400 transition-colors"
-                style={{ fontFamily: '"Instrument Sans", sans-serif' }}
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-4">
+              <iframe
+                data-tally-src="https://tally.so/r/XxDedj"
+                width="100%"
+                height="400"
+                frameBorder="0"
+                marginHeight={0}
+                marginWidth={0}
+                title="ProdSignal Waitlist"
               />
-              <button
-                onClick={submitEmail}
-                className="px-8 py-4 bg-white text-black rounded-full font-bold hover:bg-amber-400 transition-colors"
-                style={{ fontFamily: '"Space Grotesk", sans-serif' }}
-              >
-                Notify Me
-              </button>
             </div>
           </section>
         </div>
