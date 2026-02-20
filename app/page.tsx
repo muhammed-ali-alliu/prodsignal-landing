@@ -11,6 +11,7 @@ import {
   Upload,
   X,
   ArrowRight,
+  ArrowDown,
   Download,
   Mail,
   Waves,
@@ -412,7 +413,7 @@ ${parsedResults?.features.map((f, i) => `### ${i + 1}. ${f.feature}
                   </p>
 
                   <p className="text-xl text-white/60 leading-relaxed mb-10 max-w-lg" style={{ fontFamily: '"Instrument Sans", sans-serif' }}>
-                    Upload customer interviews. Get AI-powered PRDs with full traceability from quotes to features.
+                    Turn messy interview notes into clean, prioritized PRDs
                   </p>
 
                   <button
@@ -548,6 +549,92 @@ ${parsedResults?.features.map((f, i) => `### ${i + 1}. ${f.feature}
                       </div>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Before/After Transformation */}
+          <section className="py-20 border-t border-white/5">
+            <div className="max-w-6xl mx-auto px-6">
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
+                  See the Transformation
+                </h2>
+                <p className="text-white/60" style={{ fontFamily: '"Instrument Sans", sans-serif' }}>
+                  From scattered notes to export-ready PRDs
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                {/* Before */}
+                <div className="relative">
+                  <div className="bg-red-500/5 border border-red-500/20 rounded-3xl p-8">
+                    <div className="flex items-center gap-2 mb-6">
+                      <span className="text-2xl">❌</span>
+                      <h3 className="text-xl font-bold text-red-400" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>Before ProdSignal</h3>
+                    </div>
+                    <ul className="space-y-4">
+                      <li className="flex items-center gap-3 text-white/70">
+                        <span className="text-red-400">❌</span>
+                        100+ pages of scattered notes
+                      </li>
+                      <li className="flex items-center gap-3 text-white/70">
+                        <span className="text-red-400">❌</span>
+                        3-5 days of manual synthesis
+                      </li>
+                      <li className="flex items-center gap-3 text-white/70">
+                        <span className="text-red-400">❌</span>
+                        No clear patterns
+                      </li>
+                      <li className="flex items-center gap-3 text-white/70">
+                        <span className="text-red-400">❌</span>
+                        Decisions based on gut feel
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                {/* Arrow */}
+                <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-400 to-emerald-400 flex items-center justify-center shadow-lg shadow-amber-400/25">
+                    <ArrowRight className="w-8 h-8 text-black" />
+                  </div>
+                </div>
+
+                {/* After */}
+                <div className="relative md:ml-auto">
+                  <div className="bg-emerald-500/5 border border-emerald-500/20 rounded-3xl p-8">
+                    <div className="flex items-center gap-2 mb-6">
+                      <span className="text-2xl">✅</span>
+                      <h3 className="text-xl font-bold text-emerald-400" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>After ProdSignal</h3>
+                    </div>
+                    <ul className="space-y-4">
+                      <li className="flex items-center gap-3 text-white/70">
+                        <span className="text-emerald-400">✅</span>
+                        Clear themes with evidence
+                      </li>
+                      <li className="flex items-center gap-3 text-white/70">
+                        <span className="text-emerald-400">✅</span>
+                        Analysis in hours, not days
+                      </li>
+                      <li className="flex items-center gap-3 text-white/70">
+                        <span className="text-emerald-400">✅</span>
+                        Prioritized features with quotes
+                      </li>
+                      <li className="flex items-center gap-3 text-white/70">
+                        <span className="text-emerald-400">✅</span>
+                        Export-ready PRD
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Mobile arrow */}
+              <div className="flex md:hidden justify-center my-8">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-400 to-emerald-400 flex items-center justify-center">
+                  <ArrowDown className="w-6 h-6 text-black" />
                 </div>
               </div>
             </div>
