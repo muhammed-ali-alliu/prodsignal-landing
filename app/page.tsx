@@ -374,14 +374,42 @@ ${parsedResults?.features.map((f, i) => `### ${i + 1}. ${f.feature}
           <span className="text-xl font-bold tracking-tight" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
             ProdSignal
           </span>
-          {appState === 'results' && (
-            <button
-              onClick={() => { setAppState('landing'); setAnalysis(''); setParsedResults(null); setUploadedFiles([]); setPastedText([]); }}
-              className="text-sm text-white/60 hover:text-white transition-colors"
-            >
-              ← New Analysis
-            </button>
-          )}
+          <nav className="flex items-center gap-6">
+            {appState === 'landing' ? (
+              <>
+                <button
+                  onClick={scrollToDemo}
+                  className="text-sm text-white/60 hover:text-white transition-colors"
+                  style={{ fontFamily: '"Instrument Sans", sans-serif' }}
+                >
+                  Demo
+                </button>
+                <button
+                  onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="text-sm text-white/60 hover:text-white transition-colors"
+                  style={{ fontFamily: '"Instrument Sans", sans-serif' }}
+                >
+                  Pricing
+                </button>
+                <a
+                  href="https://www.indiehackers.com/post/validating-prodsignal-ai-copilot-for-product-discovery-yc-rfs-Lgm5IVcaXzoIdF1eQ4kM"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-white/60 hover:text-white transition-colors"
+                  style={{ fontFamily: '"Instrument Sans", sans-serif' }}
+                >
+                  About
+                </a>
+              </>
+            ) : (
+              <button
+                onClick={() => { setAppState('landing'); setAnalysis(''); setParsedResults(null); setUploadedFiles([]); setPastedText([]); }}
+                className="text-sm text-white/60 hover:text-white transition-colors"
+              >
+                ← New Analysis
+              </button>
+            )}
+          </nav>
         </div>
       </header>
 
@@ -727,7 +755,7 @@ ${parsedResults?.features.map((f, i) => `### ${i + 1}. ${f.feature}
               </div>
 
               {/* Pricing */}
-              <div>
+              <div id="pricing-section">
                 <div className="text-center mb-12">
                   <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/10 text-amber-400 rounded-full text-sm font-medium mb-6">
                     <span>Early Access</span>

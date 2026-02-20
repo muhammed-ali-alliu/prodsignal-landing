@@ -15,6 +15,9 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "ProdSignal - AI Product Discovery Tool",
   description: "ProdSignal analyzes customer interviews and tells you what to build - backed by real evidence. Find signal in customer noise.",
+  alternates: {
+    canonical: "https://prodsignal-landing.vercel.app/",
+  },
 };
 
 export default function RootLayout({
@@ -26,6 +29,24 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <script src="https://tally.so/widgets/embed.js" async></script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              "name": "ProdSignal",
+              "applicationCategory": "BusinessApplication",
+              "description": "AI copilot for product discovery. Turn customer interviews into prioritized PRDs in hours, not weeks.",
+              "url": "https://prodsignal-landing.vercel.app",
+              "offers": {
+                "@type": "Offer",
+                "price": "39",
+                "priceCurrency": "GBP"
+              }
+            })
+          }}
+        />
       </head>
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}
